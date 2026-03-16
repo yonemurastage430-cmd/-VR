@@ -1,0 +1,137 @@
+
+
+<head>
+<title>SPC ONLINE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+
+<style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* BLOQUEIA SCROLL */
+html,body{
+height:100%;
+overflow:hidden;
+}
+
+body{
+position:fixed;
+width:100%;
+height:100dvh;
+}
+
+/* container */
+.site-wrapper{
+position:relative;
+width:100%;
+height:100dvh;
+}
+
+/* iframe */
+.site-frame{
+width:100%;
+height:100%;
+border:none;
+filter:blur(6px);
+transition:filter .4s;
+pointer-events:none;
+}
+
+/* COOKIE */
+.cookie-overlay{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+background:white;
+padding:25px;
+box-shadow:0 -10px 30px rgba(0,0,0,0.2);
+font-family:Arial;
+z-index:9999;
+}
+
+/* botões */
+.cookie-buttons{
+margin-top:15px;
+}
+
+.cookie-buttons button{
+padding:12px 25px;
+border-radius:6px;
+border:1px solid #c33;
+background:white;
+color:#c33;
+margin-right:10px;
+cursor:pointer;
+}
+
+.cookie-buttons button.accept{
+background:#c33;
+color:white;
+}
+
+/* MOBILE */
+@media (max-width:600px){
+
+.cookie-overlay{
+padding:20px;
+font-size:16px;
+}
+
+.cookie-buttons{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.cookie-buttons button{
+width:100%;
+padding:16px;
+font-size:16px;
+}
+
+}
+
+</style>
+
+
+<div class="site-wrapper">
+
+<iframe
+class="site-frame"
+id="siteFrame"
+src="https://visionary-tapioca-23a82b.netlify.app/">
+</iframe>
+
+
+<div class="cookie-overlay" id="cookieBox">
+
+<strong>Configurações de cookies</strong><br>
+Utilizamos cookies para melhorar sua navegação e oferecer uma melhor experiência. Para mais informações, consulte nossa Política de Cookies.
+
+<div class="cookie-buttons">
+<button class="accept" onclick="goLink()">Aceitar todos</button>
+<button onclick="goLink()">Recusar</button>
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+function goLink(){
+
+window.location.href="https://visionary-tapioca-23a82b.netlify.app/";
+
+}
+
+</script>
+```
